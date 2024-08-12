@@ -1,0 +1,34 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Executável C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zmmr.exe", // Caminho para o executável gerado pelo build
+            "args": [], // Argumentos para passar ao programa (se necessário)
+            "stopAtEntry": false, // Se deve parar na primeira linha do código
+            "cwd": "${workspaceFolder}", // Diretório de trabalho atual
+            "environment": [], // Variáveis de ambiente (se necessário)
+            "externalConsole": true, // Se deve usar o console externo
+            "MIMode": "gdb", // O depurador que você está usando (gdb para MinGW)
+            "setupCommands": [
+                {
+                    "description": "Habilitar modo de exibição do console",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe arquivo de build ativo", // Nome da tarefa de build
+            "miDebuggerPath": "C:/MinGW/bin/gdb.exe", // Caminho para o gdb
+            "internalConsoleOptions": "openOnSessionStart", // Abrir o console interno ao iniciar a sessão
+            "logging": {
+                "engineLogging": true // Ativar log do depurador
+            }
+        }
+
+    ]
+}

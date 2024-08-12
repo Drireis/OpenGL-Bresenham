@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe arquivo de build ativo",
+            "command": "C:/MinGW/bin/g++.exe",
+            "args": [
+                "-g",                
+                "-I${workspaceFolder}/freeglut",
+                "-L${workspaceFolder}/freeglut",
+                "${workspaceFolder}/main.cpp",                                
+                "-o",                                
+                "${workspaceFolder}/zmmr.exe",
+                "-lfreeglut",                             
+                "-lopengl32",
+                "-lgdi32",
+                "-lglu32",                     
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarefa gerada pelo Depurador."
+        }
+    ]    
+}
